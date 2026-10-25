@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'sasanka19/myapp'
-        IMAGE_TAG = "${env.BUILD_NUMBER}"
-    }
+    DOCKER_CONTEXT = 'default'
+    IMAGE_NAME = 'sasanka19/myapp'
+    IMAGE_TAG = "${env.BUILD_NUMBER}"
+}
 
     stages {
         stage('Checkout') {
